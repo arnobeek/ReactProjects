@@ -8,3 +8,8 @@
   background-color: rgba(1,32,93,0.6);
   color: white;
 }
+.link:hover{
+  background-color: grey;
+  font-size: 15px;
+  width: 200px;
+}
