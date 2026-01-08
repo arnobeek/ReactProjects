@@ -9,12 +9,15 @@ import MyAppointments from './pages/MyAppointments'
 import Appointment from './pages/Appointment'
 import MyProfile from './pages/MyProfile'
 import Navbar from './components/navbar'
+import AppContextProvider from './context/AppContext'
+import Footer from './components/Footer'
 
 function App() {
   
   return (
       <BrowserRouter>
-      <div className='mx-4 sm:mx-[10%]'>
+      <AppContextProvider>
+        <div className='mx-4 sm:mx-[10%]'>
       <Navbar />
         
       <Routes>
@@ -28,7 +31,9 @@ function App() {
         <Route path='/my-appointments' element={<MyAppointments />}/>
         <Route path='/appointment/:docId' element={<Appointment />}/>
       </Routes>
+      <Footer />
       </div>
+      </AppContextProvider>
       </BrowserRouter>
     
   )
